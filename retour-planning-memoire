@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retroplanning Diagramme de Gantt</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/frappe-gantt/0.5.0/frappe-gantt.min.js"></script>
+    <style>
+        #gantt {
+            margin-top: 20px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Diagramme de Gantt - Rétroplanning du Mémoire</h2>
+    <div id="gantt"></div>
+    <script>
+        const tasks = [
+            {
+                id: '1',
+                name: 'Note de cadrage',
+                start: '2023-11-01',
+                end: '2023-11-17',
+                progress: 100
+            },
+            {
+                id: '2',
+                name: 'Revue de la littérature',
+                start: '2023-12-01',
+                end: '2024-01-31',
+                progress: 0
+            },
+            {
+                id: '3',
+                name: 'Cadrage méthodologique',
+                start: '2024-01-15',
+                end: '2024-01-31',
+                progress: 0
+            },
+            {
+                id: '4',
+                name: 'Analyse des perceptions et état d’esprit',
+                start: '2024-02-01',
+                end: '2024-03-31',
+                progress: 0
+            },
+            {
+                id: '5',
+                name: 'Études de cas et analyse comparative',
+                start: '2024-04-01',
+                end: '2024-04-30',
+                progress: 0
+            },
+            {
+                id: '6',
+                name: 'Observation et expérimentation d’ateliers',
+                start: '2024-05-01',
+                end: '2024-05-31',
+                progress: 0
+            },
+            {
+                id: '7',
+                name: 'Synthèse et élaboration du cadre de sensibilisation',
+                start: '2024-05-01',
+                end: '2024-05-27',
+                progress: 0
+            },
+            {
+                id: '8',
+                name: 'Dépôt du mémoire',
+                start: '2024-05-27',
+                end: '2024-05-27',
+                progress: 0
+            },
+            {
+                id: '9',
+                name: 'Soutenance',
+                start: '2024-06-24',
+                end: '2024-06-30',
+                progress: 0
+            }
+        ];
+
+        const gantt = new Gantt("#gantt", tasks, {
+            view_mode: 'Month',
+            date_format: 'YYYY-MM-DD'
+        });
+    </script>
+</body>
+</html>
